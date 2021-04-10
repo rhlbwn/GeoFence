@@ -8,6 +8,7 @@
 import UIKit
 import CoreLocation
 import CoreData
+import Firebase
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -25,6 +26,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             print("Error: \(error)")
           }
         }
+        FirebaseApp.configure()
         return true
     }
 
