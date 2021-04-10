@@ -13,6 +13,7 @@
 		B43E67F126219E3C00FF7D3B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43E67EF26219E3C00FF7D3B /* Main.storyboard */; };
 		B43E67F326219E3F00FF7D3B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B43E67F226219E3F00FF7D3B /* Assets.xcassets */; };
 		B43E67F626219E3F00FF7D3B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B43E67F426219E3F00FF7D3B /* LaunchScreen.storyboard */; };
+		B43E68052621CB9700FF7D3B /* GeoFenceModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B43E68032621CB9700FF7D3B /* GeoFenceModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		B43E67F226219E3F00FF7D3B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B43E67F526219E3F00FF7D3B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B43E67F726219E3F00FF7D3B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B43E68042621CB9700FF7D3B /* GeoFenceModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GeoFenceModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				B43E67F226219E3F00FF7D3B /* Assets.xcassets */,
 				B43E67F426219E3F00FF7D3B /* LaunchScreen.storyboard */,
 				B43E67F726219E3F00FF7D3B /* Info.plist */,
+				B43E68032621CB9700FF7D3B /* GeoFenceModel.xcdatamodeld */,
 			);
 			path = GeoFence;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 				B43E67EE26219E3C00FF7D3B /* ViewController.swift in Sources */,
 				B43E67EA26219E3C00FF7D3B /* AppDelegate.swift in Sources */,
 				B43E67EC26219E3C00FF7D3B /* SceneDelegate.swift in Sources */,
+				B43E68052621CB9700FF7D3B /* GeoFenceModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,7 +299,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.GeoFence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,7 +317,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.GeoFence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -339,6 +343,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B43E68032621CB9700FF7D3B /* GeoFenceModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B43E68042621CB9700FF7D3B /* GeoFenceModel.xcdatamodel */,
+			);
+			currentVersion = B43E68042621CB9700FF7D3B /* GeoFenceModel.xcdatamodel */;
+			path = GeoFenceModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = B43E67DE26219E3C00FF7D3B /* Project object */;
 }

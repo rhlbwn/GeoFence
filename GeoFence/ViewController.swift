@@ -8,6 +8,7 @@
 import UIKit
 import MapKit
 import CoreLocation
+import CoreData
 
 let REGION_IDENTIFIER = "GeoFence"
 
@@ -30,6 +31,41 @@ class ViewController: UIViewController {
             setupRegion()
         } else {
             self.locationManager.requestAlwaysAuthorization()
+        }
+    }
+    
+    @IBAction func printCoreData(_ sender: Any) {
+        fetchRecords()
+    }
+    
+    func fetchRecords() {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        let entryRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "EnteringRegion")
+        let exitRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "ExitingRegion")
+        entryRequest.returnsObjectsAsFaults = false
+        exitRequest.returnsObjectsAsFaults = false
+
+        do {
+            print("Entry Records")
+            let entryResult = try context.fetch(entryRequest)
+            for data in entryResult as! [NSManagedObject] {
+                let lat = data.value(forKey: "latitude") as! Double
+                let long = data.value(forKey: "longitude") as! Double
+                let time = data.value(forKey: "time") as! String
+                print("Latitude: \(lat); Longitude: \(long); Time: \(time)")
+            }
+            
+            print("Exit Records")
+            let exitResult = try context.fetch(exitRequest)
+            for data in exitResult as! [NSManagedObject] {
+                let lat = data.value(forKey: "latitude") as! Double
+                let long = data.value(forKey: "longitude") as! Double
+                let time = data.value(forKey: "time") as! String
+                print("Latitude: \(lat); Longitude: \(long); Time: \(time)")
+            }
+        } catch {
+            print("Failed")
         }
     }
 }
