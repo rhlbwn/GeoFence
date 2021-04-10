@@ -1,7 +1,9 @@
 # GeoFence
 
 Strart application
-Give permission to Access location always
+Give following permissions: 
+1.Access location always
+2.Sending notifications
 
 The region is set for Mumbai location
 
